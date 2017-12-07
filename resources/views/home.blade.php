@@ -16,6 +16,10 @@
 
                     You are logged in!
                 </div>
+
+                <div class="panel-footer">
+                    <a href="{{ route('settings') }}" class="btn btn-primary">Manage Settings</a>
+                </div>
             </div>
         </div>
     </div>

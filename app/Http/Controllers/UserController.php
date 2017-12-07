@@ -64,7 +64,7 @@ class UserController extends Controller
 
             $user->save();
 
-            return redirect()->route('profile', ['id' => Auth::id()]);
+            return redirect('profile/' . Auth::id());
         }
 
         return view('settings');
