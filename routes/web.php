@@ -20,3 +20,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::match(['get', 'post'], '/user/settings', 'UserController@settings')->name('settings');
+
+
+Route::get('/profile', function () {
+    $user = \App\User::findOrFail(1);
+    return view('profile', ['user' => $user]);
+})->name('profile');
